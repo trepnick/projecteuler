@@ -4,9 +4,7 @@ setup(
     name="euler",
     version="1.0",
     py_modules=["euler", "commands"],
-    install_requires=[
-        "click",
-    ],
+    install_requires=["click", "rich"],
     entry_points="""
         [console_scripts]
         euler=euler:cli
