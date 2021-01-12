@@ -1,4 +1,7 @@
 import math
+from logging import getLogger
+
+log = getLogger("rich")
 
 
 def problem_one():

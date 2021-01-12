@@ -13,7 +13,7 @@ def get_description(problem_number):
         page = BeautifulSoup(response.content, "html.parser")
         return page.get_text()
     except requests.exceptions.Timeout as e:
-        log.warn(e)
+        log.error(e)
         return ""
 
 
