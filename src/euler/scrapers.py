@@ -15,7 +15,3 @@ def get_description(problem_number):
     except requests.exceptions.Timeout as e:
         log.error(e)
         return ""
-
-
-if __name__ == "__main__":
-    print(get_description(1))
