@@ -1,22 +1,18 @@
 import math
 
-import click
 
-
-@click.command()
-@click.option("--max_num", default=1000, help="Number to max out at")
-def one(max_num):
+def problem_one():
     solution = 0
+    max_num = 1000
     for num in range(max_num):
         if num % 3 == 0 or num % 5 == 0:
             solution += num
-    click.echo(solution)
+    return solution
 
 
-@click.command()
-@click.option("--max_num", default=4000000, help="Number to max out at")
-def two(max_num):
+def problem_two():
     ans = 0
+    max_num = 4000000
 
     def fib(max_num):
         a = 1
@@ -32,12 +28,12 @@ def two(max_num):
         if i % 2 == 0:
             ans += i
 
-    click.echo(ans)
+    return ans
 
 
-@click.command()
-@click.option("-n", default=600851475143, help="number to factor")
-def three(n):
+def problem_three():
+    n = 600851475143
+
     def get_prime_factors(number):
         # create an empty list and later I will
         # run a for loop with range() function using the append() method to add elements to the list.
@@ -77,26 +73,25 @@ def three(n):
 
         return prime_factors
 
-    click.echo(get_prime_factors(n)[-1])
+    ans = get_prime_factors(n)[-1]
+    return ans
 
 
-@click.command()
-def four():
+def problem_four():
     def decreasing_products(a, b):
         for c in range(a):
             for d in range(b):
                 yield c * d
 
     ans = 0
-    for i in decreasing_products(999, 999):
+    for i in decreasing_products(1000, 1000):
         if str(i) == str(i)[::-1] and i > ans:
             ans = i
-    click.echo(ans)
+    return ans
 
 
-@click.command()
-def five():
-    pass
+def _unsolved():
+    return "No solution has been provided yet!"
 
 
-all_commands = [one, two, three, four, five]
+all_solutions = [_unsolved, problem_one, problem_two, problem_three, problem_four]
