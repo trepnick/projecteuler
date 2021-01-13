@@ -1,15 +1,27 @@
 from rich import print
+from rich.logging import RichHandler
 import click
-from logging import getLogger
+import logging
 from euler import solutions, scrapers
 
 
-log = getLogger("rich")
+log = logging.getLogger("rich")
 
 
 @click.command()
 @click.option("-n", default=1, help="number of the problem to solve")
-def cli(n):
+@click.option("-v", is_flag=True, help="Verbose command output")
+def cli(n, v):
+
+    LOGLEVEL = logging.DEBUG if v else logging.ERROR
+    FORMAT = "%(message)s"
+    logging.basicConfig(
+        level=LOGLEVEL,
+        format=FORMAT,
+        datefmt="[%X]",
+        handlers=[RichHandler(rich_tracebacks=True)],
+    )
+
     log.info("Getting problem description from euler.net website")
     print(scrapers.get_description(n))
     log.info("Solving problem")
