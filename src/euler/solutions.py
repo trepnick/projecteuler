@@ -4,7 +4,7 @@ from logging import getLogger
 log = getLogger("rich")
 
 
-def problem_one():
+def problem_one() -> int:
     solution = 0
     max_num = 1000
     for num in range(max_num):
@@ -13,7 +13,7 @@ def problem_one():
     return solution
 
 
-def problem_two():
+def problem_two() -> int:
     ans = 0
     max_num = 4000000
 
@@ -34,7 +34,7 @@ def problem_two():
     return ans
 
 
-def problem_three():
+def problem_three() -> int:
     n = 600851475143
 
     def get_prime_factors(number):
@@ -80,7 +80,7 @@ def problem_three():
     return ans
 
 
-def problem_four():
+def problem_four() -> int:
     def decreasing_products(a, b):
         for c in range(a):
             for d in range(b):
@@ -93,11 +93,11 @@ def problem_four():
     return ans
 
 
-def problem_five():
+def problem_five() -> int:
     return None
 
 
-def _unsolved():
+def _unsolved() -> str:
     return "No solution has been provided yet!"
 
 
