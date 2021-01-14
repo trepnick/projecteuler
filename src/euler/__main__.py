@@ -1,5 +1,5 @@
-from euler import commands
+from euler import _commands
 
 if __name__ == "__main__":
 
-    commands.cli()
+    _commands._cli()

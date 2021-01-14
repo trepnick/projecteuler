@@ -1,1 +1,1 @@
-from euler.commands import cli
+from euler._commands import _cli

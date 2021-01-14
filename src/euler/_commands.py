@@ -11,7 +11,7 @@ log = logging.getLogger("rich")
 @click.command()
 @click.option("-n", default=1, help="number of the problem to solve")
 @click.option("-v", is_flag=True, help="Verbose command output")
-def cli(n, v):
+def _cli(n, v):
 
     LOGLEVEL = logging.DEBUG if v else logging.ERROR
     FORMAT = "%(message)s"
