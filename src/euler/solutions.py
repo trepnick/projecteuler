@@ -94,7 +94,9 @@ def problem_four() -> int:
 
 
 def problem_five() -> int:
-    return None
+    from functools import reduce
+
+    return reduce(_lcm, range(1, 21))
 
 
 def _unsolved() -> str:
@@ -109,3 +111,13 @@ all_solutions = [
     problem_four,
     problem_five,
 ]
+
+
+def _gcd(a: int, b: int) -> int:
+    while b:
+        a, b = b, a % b
+    return a
+
+
+def _lcm(a: int, b: int) -> int:
+    return a * b // _gcd(a, b)
