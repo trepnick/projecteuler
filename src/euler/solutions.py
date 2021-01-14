@@ -93,8 +93,19 @@ def problem_four():
     return ans
 
 
+def problem_five():
+    return None
+
+
 def _unsolved():
     return "No solution has been provided yet!"
 
 
-all_solutions = [_unsolved, problem_one, problem_two, problem_three, problem_four]
+all_solutions = [
+    _unsolved,
+    problem_one,
+    problem_two,
+    problem_three,
+    problem_four,
+    problem_five,
+]
