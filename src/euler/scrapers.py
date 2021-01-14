@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 log = getLogger("rich")
 
 
-def get_description(problem_number):
+def get_description(problem_number: int):
     try:
         response = requests.get(
             f"https://projecteuler.net/minimal={problem_number}", timeout=1
