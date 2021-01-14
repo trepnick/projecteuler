@@ -27,3 +27,7 @@ def test_problem_six():
 
 def test_problem_seven():
     assert solutions.problem_seven() == 104743
+
+
+def test_problem_eight():
+    assert solutions.problem_eight() == 23514624000
