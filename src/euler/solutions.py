@@ -153,6 +153,8 @@ def problem_eight() -> int:
 
     current_ans = 0
     for i, j in enumerate(num[:-13]):
+        if "0" in num[i : i + 13]:
+            continue
         new_ans = reduce((lambda x, y: int(x) * int(y)), num[i : i + 13])
         current_ans = new_ans if new_ans > current_ans else current_ans
 
