@@ -23,3 +23,7 @@ def test_problem_five():
 
 def test_problem_six():
     assert solutions.problem_six() == 25164150
+
+
+def test_problem_seven():
+    assert solutions.problem_seven() == 104743

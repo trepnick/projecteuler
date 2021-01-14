@@ -109,6 +109,22 @@ def problem_six() -> int:
     return abs(sum_squares - square_sums)
 
 
+def problem_seven() -> int:
+    def nth_prime(n: int):
+        prime_list = [2]
+        num = 3
+        while len(prime_list) < n:
+            for p in prime_list:
+                if num % p == 0:
+                    break
+            else:
+                prime_list.append(num)
+            num += 2
+        return prime_list[-1]
+
+    return nth_prime(10001)
+
+
 def _unsolved() -> str:
     return "No solution has been provided yet!"
 
@@ -121,6 +137,7 @@ all_solutions = [
     problem_four,
     problem_five,
     problem_six,
+    problem_seven,
 ]
 
 
