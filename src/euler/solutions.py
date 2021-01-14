@@ -99,6 +99,16 @@ def problem_five() -> int:
     return reduce(_lcm, range(1, 21))
 
 
+def problem_six() -> int:
+    sum_squares: int = 0
+    square_sums: int = 0
+    for i in range(1, 101):
+        sum_squares += i ** 2
+        square_sums += i
+    square_sums = square_sums ** 2
+    return abs(sum_squares - square_sums)
+
+
 def _unsolved() -> str:
     return "No solution has been provided yet!"
 
@@ -110,6 +120,7 @@ all_solutions = [
     problem_three,
     problem_four,
     problem_five,
+    problem_six,
 ]
 
 
