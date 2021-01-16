@@ -1,6 +1,6 @@
 import math
 from logging import getLogger
-from ._math_lib import _eratosthenes, _gcd, _lcm
+from euler._math_lib import _eratosthenes, _gcd, _lcm
 
 log = getLogger(__name__)
 
