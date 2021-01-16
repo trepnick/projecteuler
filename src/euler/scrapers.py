@@ -1,5 +1,6 @@
-import requests
 from logging import getLogger
+
+import requests
 from bs4 import BeautifulSoup
 
 log = getLogger("rich")

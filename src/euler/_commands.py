@@ -1,9 +1,10 @@
+import logging
+
+import click
 from rich import print
 from rich.logging import RichHandler
-import click
-import logging
-from euler import solutions, scrapers
 
+from euler import scrapers, solutions
 
 log = logging.getLogger("rich")
 
