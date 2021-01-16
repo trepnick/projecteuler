@@ -39,3 +39,23 @@ def test_problem_nine():
 
 def test_problem_ten():
     assert solutions.problem_ten() == 142913828922
+
+
+def test_problem_eleven():
+    assert solutions.problem_eleven() == 70600674
+
+
+def test_problem_twelve():
+    assert solutions.problem_twelve() == 76576500
+
+
+def test_problem_thirteen():
+    assert solutions.problem_thirteen() == 5537376230
+
+
+def test_problem_fourteen():
+    assert solutions.problem_fourteen() == 837799
+
+
+def test_problem_fifteen():
+    assert solutions.problem_fifteen() == 137846528820
