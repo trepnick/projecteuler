@@ -1,5 +1,6 @@
 import math
 from logging import getLogger
+from ._math_lib import _eratosthenes, _gcd, _lcm
 
 log = getLogger(__name__)
 
@@ -196,13 +197,3 @@ all_solutions = [
     problem_eight,
     problem_nine,
 ]
-
-
-def _gcd(a: int, b: int) -> int:
-    if b:
-        return _gcd(b, a % b)
-    return a
-
-
-def _lcm(a: int, b: int) -> int:
-    return a * b // _gcd(a, b)
