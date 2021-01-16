@@ -3,7 +3,7 @@ from logging import getLogger
 import requests
 from bs4 import BeautifulSoup
 
-log = getLogger("rich")
+log = getLogger(__name__)
 
 
 def get_description(problem_number: int):

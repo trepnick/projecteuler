@@ -6,7 +6,7 @@ from rich.logging import RichHandler
 
 from euler import scrapers, solutions
 
-log = logging.getLogger("rich")
+log = logging.getLogger(__name__)
 
 
 @click.command()
