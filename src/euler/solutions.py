@@ -181,6 +181,10 @@ def problem_nine() -> int:
             return a * b * c
 
 
+def problem_ten() -> int:
+    return sum(_eratosthenes(2000000))
+
+
 def _unsolved() -> str:
     return "No solution has been provided yet!"
 
@@ -196,4 +200,5 @@ all_solutions = [
     problem_seven,
     problem_eight,
     problem_nine,
+    problem_ten,
 ]
