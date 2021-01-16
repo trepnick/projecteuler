@@ -161,6 +161,25 @@ def problem_eight() -> int:
     return current_ans
 
 
+def problem_nine() -> int:
+    def pythagoreanTriples(limit: int) -> tuple[int, int, int]:
+        c, m = 0, 2
+
+        while c < limit:
+            for n in range(1, m):
+                a = m ** 2 - n ** 2
+                b = 2 * n * m
+                c = m ** 2 + n ** 2
+                if c > limit:
+                    break
+                yield (a, b, c)
+            m += 1
+
+    for a, b, c in pythagoreanTriples(1000):
+        if a + b + c == 1000:
+            return a * b * c
+
+
 def _unsolved() -> str:
     return "No solution has been provided yet!"
 
@@ -175,6 +194,7 @@ all_solutions = [
     problem_six,
     problem_seven,
     problem_eight,
+    problem_nine,
 ]
 
 
