@@ -177,8 +177,8 @@ all_solutions = [
 
 
 def _gcd(a: int, b: int) -> int:
-    while b:
-        a, b = b, a % b
+    if b:
+        return _gcd(b, a % b)
     return a
 
 
