@@ -112,19 +112,9 @@ def problem_six() -> int:
 
 
 def problem_seven() -> int:
-    def nth_prime(n: int):
-        prime_list = [2]
-        num = 3
-        while len(prime_list) < n:
-            for p in prime_list:
-                if num % p == 0:
-                    break
-            else:
-                prime_list.append(num)
-            num += 2
-        return prime_list[-1]
+    primes = eratosthenes(math.floor(10001 * 2 * math.log(10001)))
 
-    return nth_prime(10001)
+    return primes[10000]
 
 
 def problem_eight() -> int:
