@@ -1,7 +1,7 @@
 import math
 from logging import getLogger
 
-from euler._math_lib import _eratosthenes, _gcd, _lcm
+from euler._math_lib import *
 
 log = getLogger(__name__)
 
@@ -98,7 +98,7 @@ def problem_four() -> int:
 def problem_five() -> int:
     from functools import reduce
 
-    return reduce(_lcm, range(1, 21))
+    return reduce(lcm, range(1, 21))
 
 
 def problem_six() -> int:
@@ -183,7 +183,7 @@ def problem_nine() -> int:
 
 
 def problem_ten() -> int:
-    return sum(_eratosthenes(2000000))
+    return sum(eratosthenes(2000000))
 
 
 def _unsolved() -> str:

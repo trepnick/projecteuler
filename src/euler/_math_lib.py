@@ -1,17 +1,17 @@
 import math
 
 
-def _gcd(a: int, b: int) -> int:
+def gcd(a: int, b: int) -> int:
     if b:
-        return _gcd(b, a % b)
+        return gcd(b, a % b)
     return a
 
 
-def _lcm(a: int, b: int) -> int:
-    return a * b // _gcd(a, b)
+def lcm(a: int, b: int) -> int:
+    return a * b // gcd(a, b)
 
 
-def _eratosthenes(limit: int) -> list[int]:
+def eratosthenes(limit: int) -> list[int]:
 
     prime = [True for i in range(limit)]
     p = 2
